@@ -227,6 +227,14 @@ Claude Code가 제시하는 계획을 확인한 뒤 승인(`y` 또는 `proceed`)
    - **Cloud / Region**: `AWS / us-east-1 (Virginia)` — 무료 요금제의 유일한 옵션
 3. 생성 완료 후 인덱스 상세 화면의 **Host URL** (예: `https://review-chatbot-xxxx.svc.aped-4627-b74a.pinecone.io`)과 **API Key**를 복사해 둡니다.
 
+방금 만든 인덱스는 리뷰 문장을 좌표로 바꿔서 저장합니다. 비슷한 내용의 리뷰끼리는 가까운 좌표에 놓이고,
+사용자의 질문도 같은 방식으로 좌표를 얻어 **가장 가까운 리뷰들만** 찾아옵니다.
+
+![diagram w:900](assets/embedding-space.svg)
+
+예를 들어 "러닝머신에서 안 빠지나요?"라는 질문은 고정력·운동 관련 리뷰 근처에 놓이고,
+음질을 다루는 리뷰들과는 자연히 멀어집니다. 뒤에 나올 `searchRecords()`가 바로 이 좌표 거리를 계산해줍니다.
+
 > [!IMPORTANT]
 > **왜 이 모델을 쓰나요? — 임베딩 키가 필요 없기 때문입니다.**
 > 위 방식으로 만든 인덱스는 **Integrated Inference(통합 임베딩) 인덱스**입니다.
@@ -375,7 +383,14 @@ mkdir -p samples && cp ~/dev/ai_24h/day1_cursor_rag/hands_on/2_쇼핑_리뷰_분
 
 ## 3단계: LangChain LCEL 기반 RAG 파이프라인 구축 (Code & Verify)
 
-필요한 백엔드 패키지를 설치하고 RAG 파이프라인을 구축합니다.
+필요한 백엔드 패키지를 설치하고 RAG 파이프라인을 구축합니다. 이번 단계에서 만들 것은 크게 두 갈래입니다.
+
+![diagram w:1000](assets/rag-two-phase.svg)
+
+- **인덱싱 (3.2)**: `review.csv`를 읽어 임베딩한 뒤 Pinecone에 저장해두는, 미리 한 번만 해두는 작업
+- **질의응답 (3.3)**: 사용자 질문이 들어오면 가까운 리뷰 5건을 검색하고, 그 내용을 근거로 Claude가 답하는 작업
+
+**"인덱싱은 미리, 검색은 매 질문마다"** — 이 둘을 헷갈리면 API를 잘못된 곳에 걸게 되니 구분해서 진행하세요.
 
 ### 3.1 종속성 설치
 Claude Code 대화창에서 설치를 지시하거나 터미널에서 실행합니다.

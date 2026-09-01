@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">RAG의 두 단계</title>
+  <desc id="desc">리뷰를 미리 벡터로 저장하는 준비 단계와, 질문마다 유사 리뷰를 찾아 답변을 만드는 실행 단계</desc>
+  <defs>
+    <marker id="arr0f766e" markerWidth="18" markerHeight="14" refX="17" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,1 L17,7 L1,13 Z" fill="#0f766e"/></marker>
+    <marker id="arr2563eb" markerWidth="18" markerHeight="14" refX="17" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,1 L17,7 L1,13 Z" fill="#2563eb"/></marker>
+  </defs>
+  <rect width="1200" height="520" fill="#f8fafc"/>
+  <rect x="173" y="56" width="248" height="140" rx="22" fill="#ecfdf5" stroke="#86efac" stroke-width="2.5"/>
+  <text x="298" y="114" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="30" font-weight="800" fill="#0f172a">review.csv</text>
+  <text x="298" y="159" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="21" font-weight="700" fill="#334155">리뷰 100건</text>
+  <rect x="512" y="56" width="204" height="140" rx="22" fill="#0b1020" stroke="#334155" stroke-width="2.5"/>
+  <text x="614" y="114" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="30" font-weight="800" fill="#ffffff">임베딩</text>
+  <text x="614" y="159" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="21" font-weight="700" fill="#e2e8f0">문장을 좌표로</text>
+  <rect x="806" y="56" width="220" height="140" rx="22" fill="#fff7ed" stroke="#fdba74" stroke-width="2.5"/>
+  <text x="916" y="114" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="30" font-weight="800" fill="#0f172a">Pinecone</text>
+  <text x="916" y="159" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="21" font-weight="700" fill="#334155">벡터 저장</text>
+  <rect x="74" y="292" width="198" height="172" rx="22" fill="#ecfdf5" stroke="#86efac" stroke-width="2.5"/>
+  <text x="172" y="350" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="30" font-weight="800" fill="#0f172a">질문</text>
+  <text x="172" y="395" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="21" font-weight="700" fill="#334155">러닝머신에서</text>
+  <text x="172" y="427" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="21" font-weight="700" fill="#334155">안 빠지나요?</text>
+  <rect x="361" y="308" width="201" height="140" rx="22" fill="#0b1020" stroke="#334155" stroke-width="2.5"/>
+  <text x="462" y="366" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="30" font-weight="800" fill="#ffffff">유사 검색</text>
+  <text x="462" y="411" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="21" font-weight="700" fill="#e2e8f0">가까운 5건</text>
+  <rect x="652" y="308" width="202" height="140" rx="22" fill="#0b1020" stroke="#334155" stroke-width="2.5"/>
+  <text x="753" y="366" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="30" font-weight="800" fill="#ffffff">프롬프트</text>
+  <text x="753" y="411" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="21" font-weight="700" fill="#e2e8f0">리뷰 5건 삽입</text>
+  <rect x="944" y="292" width="182" height="172" rx="22" fill="#fff7ed" stroke="#fdba74" stroke-width="2.5"/>
+  <text x="1035" y="350" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="30" font-weight="800" fill="#0f172a">Claude</text>
+  <text x="1035" y="395" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="21" font-weight="700" fill="#334155">근거 기반</text>
+  <text x="1035" y="427" text-anchor="middle" font-family='Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", sans-serif' font-size="21" font-weight="700" fill="#334155">답변</text>
+  <path d="M432 126 L502 126" stroke="#2563eb" stroke-width="5" fill="none" stroke-linecap="round" marker-end="url(#arr2563eb)"/>
+  <path d="M726 126 L796 126" stroke="#2563eb" stroke-width="5" fill="none" stroke-linecap="round" marker-end="url(#arr2563eb)"/>
+  <path d="M281 378 L351 378" stroke="#0f766e" stroke-width="5" fill="none" stroke-linecap="round" marker-end="url(#arr0f766e)"/>
+  <path d="M572 378 L642 378" stroke="#0f766e" stroke-width="5" fill="none" stroke-linecap="round" marker-end="url(#arr0f766e)"/>
+  <path d="M864 378 L934 378" stroke="#0f766e" stroke-width="5" fill="none" stroke-linecap="round" marker-end="url(#arr0f766e)"/>
+</svg>
