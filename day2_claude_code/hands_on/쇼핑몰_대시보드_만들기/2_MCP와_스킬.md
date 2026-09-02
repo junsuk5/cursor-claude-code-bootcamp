@@ -377,7 +377,7 @@ claude
 **[Claude Code 프롬프트]**
 
 ```text
-/admin/coupons 쿠폰 관리 페이지를 추가해줘.
+/admin/low-stock 재고 부족 상품 전용 페이지를 추가해줘. products 테이블에서 재고 5개 미만인 상품만 목록으로 보여줘.
 ```
 
 스킬 이름을 부르지 않았는데도 `add-page` 스킬이 호출되는지 보세요.
