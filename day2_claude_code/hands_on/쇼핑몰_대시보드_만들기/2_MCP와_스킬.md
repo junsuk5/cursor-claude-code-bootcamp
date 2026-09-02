@@ -216,6 +216,10 @@ Playwright MCP를 사용해서 E2E 브라우저 테스트를 수행해줘:
 
 이 절에서는 **공개된 스킬을 설치해서 써보고 → 코드를 뜯어보고 → 같은 구조로 내 스킬을 만드는** 순서로 진행합니다.
 
+> [!NOTE]
+> 스킬의 전체 스펙(frontmatter 필드, 트리거 방식, 우선순위 등)은 공식 문서에 정리되어 있습니다.
+> [Agent Skills — 공식 문서](https://platform.claude.com/docs/ko/agents-and-tools/agent-skills/overview)
+
 ### 4.1 공개 스킬 설치해서 써보기 (`eli5`)
 
 Claude Code는 **플러그인 마켓플레이스**로 스킬을 배포합니다.
