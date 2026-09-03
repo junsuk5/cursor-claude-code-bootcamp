@@ -98,7 +98,7 @@ docs/PRD.md 를 읽고, 오늘 할 일을 단계별로 나눠서 docs/PROGRESS.m
 
 ### 기능 수행
 
-```test
+```text
 PROGRESS.md 를 참고하여 Phase1을 구현해 줘. 진행하면서 체크리스트에 완료된 것을 체크해 줘.
 ```
 
